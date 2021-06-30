@@ -550,7 +550,7 @@ When marked as AFK, any mentions will be replied to with a message to say you're
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
 GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio)
 
-STATS_HANDLER = CommandHandler("stats", stats)
+USERS_HANDLER = CommandHandler("users", users)
 ID_HANDLER = DisableAbleCommandHandler("id", get_id)
 GIFID_HANDLER = DisableAbleCommandHandler("gifid", gifid)
 INFO_HANDLER = DisableAbleCommandHandler(("info", "book"), info)
@@ -558,7 +558,7 @@ INFO_HANDLER = DisableAbleCommandHandler(("info", "book"), info)
 SET_ABOUT_HANDLER = DisableAbleCommandHandler("setme", set_about_me)
 GET_ABOUT_HANDLER = DisableAbleCommandHandler("me", about_me)
 
-dispatcher.add_handler(STATS_HANDLER)
+dispatcher.add_handler(USERS_HANDLER)
 dispatcher.add_handler(ID_HANDLER)
 dispatcher.add_handler(GIFID_HANDLER)
 dispatcher.add_handler(INFO_HANDLER)
@@ -577,5 +577,5 @@ __handlers__ = [
     GET_BIO_HANDLER,
     SET_ABOUT_HANDLER,
     GET_ABOUT_HANDLER,
-    STATS_HANDLER,
+    USERS_HANDLER,
 ]
