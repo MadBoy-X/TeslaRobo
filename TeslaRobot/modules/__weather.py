@@ -47,14 +47,14 @@ async def _(event):
         sun_set_time = int(response_api["sys"]["sunset"]) + country_time_zone
         await event.reply(
             """**Location**: {}
-**Temperature**: {}°С
+**➥ Temperature**: {}°С
     __minimium__: {}°С
     __maximum__ : {}°С
-**Humidity**: {}%
-**Wind**: {}m/s
-**Clouds**: {}hpa
-**Sunrise**: {} {}
-**Sunset**: {} {}""".format(
+**➥ Humidity**: {}%
+**➥ Wind**: {}m/s
+**➥ Clouds**: {}hpa
+**➥ Sunrise**: {} {}
+**➥  Sunset**: {} {}""".format(
                 input_str,
                 response_api["main"]["temp"],
                 response_api["main"]["temp_min"],
