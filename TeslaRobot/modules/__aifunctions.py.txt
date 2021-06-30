@@ -1,6 +1,7 @@
 # 🙈 Give me ⭐️ before kanging code
 # © @Mr_Dark_Prince 🌚
-# © @The_Ghost_Hunter 🤴
+# © @The_Ghost_Hunter
+# © @Warning_MadBoy_is_Back 🤴
 
 import requests
 url = "https://iamai.p.rapidapi.com/ask"
@@ -11,7 +12,7 @@ from telethon import types
 from telethon.tl import functions
 import asyncio, os
 
-@register(pattern="shasa (.*)")
+@register(pattern="tesla (.*)")
 async def hmm(event):
   test = event.pattern_match.group(1)
   r = ('\n    \"consent\": true,\n    \"ip\": \"::1\",\n    \"question\": \"{}\"\n').format(test)
@@ -30,7 +31,7 @@ async def hmm(event):
   lodu = response.json()
   result = (lodu['message']['text'])
   if "no no" in result:
-   pro = "I am fairly yound and I was made by @SimpleBoy787."
+   pro = "I'm an Advanced and Modified Group Manager Bot, Developed by @Warning_MadBoy_is_Back."
    try:
       async with telethn.action(event.chat_id, 'typing'):
            await asyncio.sleep(2)
@@ -38,7 +39,7 @@ async def hmm(event):
    except CFError as e:
            print(e)
   elif "ann" in result:
-   pro = "My name is shasa"
+   pro = "Moi name iz TeslaRobo."
    try:
       async with telethn.action(event.chat_id, 'typing'):
            await asyncio.sleep(2)
