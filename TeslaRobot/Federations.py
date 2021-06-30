@@ -1,25 +1,25 @@
-#Written By Yacha on Ptb and aiorogram
-#Written By Avishek Bhattacharjee on Telethon
-#Improved version completely written by RoseLoverX on Telethon
-#By Eviral (github.com/TeamEviral ; t.me/Eviral)
-#Don't Forget to give credit and make your source public.
-#If you want to improve anything, then you can pull it or join @TheCodeTech.
-#No Copyright Allowed
+# Written By Yacha on Ptb and aiorogram
+# Written By Avishek Bhattacharjee on Telethon
+# Improved version completely written by RoseLoverX on Telethon
+# By Eviral (github.com/TeamEviral ; t.me/Eviral)
+# Don't Forget to give credit and make your source public.
+# If you want to improve anything, then you can pull it or join @TheCodeTech.
+# No Copyright Allowed
 
-from ShasaBot import tbot, CMD_HELP, OWNER_ID
+from TeslaRobot import tbot, CMD_HELP, OWNER_ID
 import os, re, csv, json, time, uuid, pytz
 from datetime import datetime
-from ShasaBot.function import is_admin
+from TeslaRobot.function import is_admin
 from io import BytesIO
-import ShasaBot.modules.sql.feds_sql as sql
+import TeslaRobot.modules.sql.feds_sql as sql
 from telethon import *
 from telethon import Button
 from telethon.tl import *
 from telethon.tl.types import User
-from ShasaBot import *
+from TeslaRobot import *
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageMediaDocument, DocumentAttributeFilename
-from ShasaBot.events import register
+from TeslaRobot.events import register
 
 
 
@@ -121,8 +121,8 @@ async def smexy(event):
             event.chat_id,
             "Are you sure you want to delete your federation? This action cannot be undone - you will lose your entire ban list, and '{}' will be permanently gone.".format(name),
             buttons=[
-                [Button.inline("Delete Federation", data="rmfed_{}".format(fed_id))],
-                [Button.inline("Cancel", data="nada")],
+                [Button.inline("𝘿𝙚𝙡𝙚𝙩𝙚 𝙁𝙚𝙙𝙚𝙧𝙖𝙩𝙞𝙤𝙣 🗑", data="rmfed_{}".format(fed_id))],
+                [Button.inline("𝘾𝙖𝙣𝙘𝙚𝙡 ✖️", data="nada")],
             ],
         )
 
@@ -248,8 +248,8 @@ async def p(event):
             event.chat_id,
             f"Please get [{fname}](tg://user?id={args.id}) to confirm that they would like to be fed admin for {name}",
             buttons=[
-                Button.inline("Confirm", data="fkfed_{}".format(mk)),
-                Button.inline("Cancel", data="smex_{}".format(km)),
+                Button.inline("𝘾𝙤𝙣𝙛𝙞𝙧𝙢 ✔️", data="fkfed_{}".format(mk)),
+                Button.inline("𝘾𝙖𝙣𝙘𝙚𝙡 ✖️", data="smex_{}".format(km)),
             ],
         )
  except Exception as e:
@@ -257,7 +257,7 @@ async def p(event):
             
 
 """
-ShasaBot Features
+TeslaRobo Features
 """
 @tbot.on(events.CallbackQuery(pattern=r"fkfed(\_(.*))"))
 async def smex_fed(event):
@@ -349,13 +349,13 @@ async def info(event):
   FEDADMIN = sql.all_fed_users(fed_id)
   TotalAdminFed = len(FEDADMIN)
   
-  caption = "Fed info:\n"
-  caption += f"FedID: `{fed_id}`\n"
-  caption += f"Name: {name}\n"
-  caption += f"Creator: [this person](tg://user?id={owner}) (`{owner}`)\n"
-  caption += f"Number of admins: `{TotalAdminFed}`\n"
-  caption += f"Number of bans: `{len(getfban)}`\n"
-  caption += f"Number of connected chats: `{len(getfchat)}`\n"
+  caption = "**__Fed info :__**\n"
+  caption += f"**➥ FedID :** `{fed_id}`\n"
+  caption += f"**➥ Name :** {name}\n"
+  caption += f"**➥ Creator :** [This Person](tg://user?id={owner}) (`{owner}`)\n"
+  caption += f"**➥ Number of admins :** `{TotalAdminFed}`\n"
+  caption += f"**➥ Number of bans :** `{len(getfban)}`\n"
+  caption += f"**➥ Number of connected chats :** `{len(getfchat)}`\n"
   try:
      subs = sql.get_subscriber(fed_id)
   except:
@@ -373,7 +373,7 @@ async def info(event):
                 nfo = sql.get_fed_info(x)
                 nme = nfo["fname"]
                 caption += f"\n- {nme} (`{x}`)"
-  buttons = Button.inline("Check Fed Admins", data="fedadm_{}".format(fed_id))
+  buttons = Button.inline("𝘾𝙝𝙚𝙘𝙠 𝙁𝙚𝙙 𝘼𝙙𝙢𝙞𝙣𝙨 ⚜️", data="fedadm_{}".format(fed_id))
   await tbot.send_message(event.chat_id, caption, buttons=buttons)
 
 
@@ -505,12 +505,12 @@ async def _(event):
                 reason,
                 int(rec),
             )
-       sax = "**New FedBan**\n"
-       sax += f"**Fed:** {name}\n"
-       sax += f"**FedAdmin:** [{event.sender.first_name}](tg://user?id={event.sender_id})\n"
-       sax += f"**User:** [{fname}](tg://user?id={r_sender_id})\n"
-       sax += f"**User ID:** `{r_sender_id}`\n"
-       sax += f"**Reason:** {reason}"
+       sax = "**__New FedBan__**\n"
+       sax += f"**➥ Fed :** {name}\n"
+       sax += f"**➥ FedAdmin :** [{event.sender.first_name}](tg://user?id={event.sender_id})\n"
+       sax += f"**➥ User :** [{fname}](tg://user?id={r_sender_id})\n"
+       sax += f"**➥ User ID :** `{r_sender_id}`\n"
+       sax += f"**➥ Reason :** {reason}"
     else:
             current_datetime = datetime.now(pytz.timezone("Asia/Kolkata"))
             kuk =  f"{current_datetime}"
@@ -530,14 +530,14 @@ async def _(event):
                 reason,
                 int(rec),
             )
-            sax = "**FedBan Reason Update**\n"
-            sax += f"**Fed:** {name}\n"
-            sax += f"**FedAdmin:** [{event.sender.first_name}](tg://user?id={event.sender_id})\n"
-            sax += f"**User:** [{fname}](tg://user?id={r_sender_id})\n"
-            sax += f"**User ID:** `{r_sender_id}`\n"
+            sax = "**__FedBan Reason Update__**\n"
+            sax += f"**➥ Fed :** {name}\n"
+            sax += f"**➥ FedAdmin :** [{event.sender.first_name}](tg://user?id={event.sender_id})\n"
+            sax += f"**➥ User :** [{fname}](tg://user?id={r_sender_id})\n"
+            sax += f"**➥ User ID :** `{r_sender_id}`\n"
             if not fbanreason == '':
-              sax += f"**Previous Reason:** {fbanreason}\n"
-            sax += f"**New Reason:** {reason}"
+              sax += f"**➥ Previous Reason :** `{fbanreason}`\n\n"
+            sax += f"**➥ New Reason :** {reason}"
     await tbot.send_message(
                 event.chat_id,
                 sax)
@@ -644,13 +644,13 @@ async def unfban(event):
       return await event.reply(f"This user isn't banned in the current federation, {name}. [{fed_id}]")
     temp = sql.un_fban_user(fed_id, fban_user_id)
     if temp:
-      sxa = "**New un-FedBan**\n"
-      sxa += f"**Fed:** {name}\n"
-      sxa += f"**FedAdmin:** [{event.sender.first_name}](tg://user?id={event.sender_id})\n"
-      sxa += f"**User:** [{fname}](tg://user?id={r_sender_id})\n"
-      sxa += f"**User ID:** `{r_sender_id}`\n"
+      sxa = "**__New Un-FedBan__**\n"
+      sxa += f"**➥ Fed :** {name}\n"
+      sxa += f"**➥ FedAdmin :** [{event.sender.first_name}](tg://user?id={event.sender_id})\n"
+      sxa += f"**➥ User :** [{fname}](tg://user?id={r_sender_id})\n"
+      sxa += f"**➥ User ID :** `{r_sender_id}`\n"
       if reason:
-        sxa += f"**Reason:** {reason}"
+        sxa += f"**➥ Reason :** {reason}"
       await tbot.send_message(
                 event.chat_id,
                 sxa)
@@ -784,7 +784,7 @@ async def fstat(event):
     if fbanreason == '':
        text = f"{fname} is currently banned in {name}.\n\n**Date of Ban:** {rs}"
     if not fbanreason == '':
-       text = f"{fname} is currently banned in {name},for the following **reason**:\n{fbanreason}\n\n**Date of Ban:** {rs}"
+       text = f"{fname} is currently banned in {name},for the following **Reason**:\n{fbanreason}\n\n**Date of Ban:** {rs}"
     return await event.reply(text)
   elif len(args) < 12:
    person = await get_user_from_event(event)
