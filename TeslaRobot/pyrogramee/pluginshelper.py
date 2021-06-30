@@ -328,7 +328,7 @@ def capture_err(func):
     return capture
 
 
-# Special credits to kittu
+# Special credits to TheHamkerCat
 
 
 async def member_permissions(chat_id, user_id):
