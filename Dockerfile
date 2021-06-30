@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/TeslaRobo
-RUN git clone -b shiken https://github.com/MadBoy-X/TeslaRobo /root/TeslaRobo
-WORKDIR /root/TeslaRobo
+# Copy Python Requirements to /root/TeslaRobot
+RUN git clone -b shiken https://github.com/MadBoy-X/TeslaRobo /root/TeslaRobot
+WORKDIR /root/TeslaRobot
 
-#Copy config file to /root/TeslaRobo/TeslaRobo
-COPY ./TeslaRobo/sample_config.py ./TeslaRobo/config.py* /root/TeslaRobo/TeslaRobo/
+# Copy config file to /root/TeslaRobot/TeslaRobot
+COPY ./TeslaRobot/sample_config.py ./TeslaRobot/config.py* /root/TeslaRobot/TeslaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","TeslaRobo"]
+CMD ["python3","-m","TeslaRobot"]
