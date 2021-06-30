@@ -2,7 +2,7 @@ from time import perf_counter
 from functools import wraps
 from cachetools import TTLCache
 from threading import RLock
-from ShasaBot import (
+from TeslaRobot import (
     DEL_CMDS,
     DEV_USERS,
     DRAGONS,
@@ -114,8 +114,8 @@ def dev_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "This is a developer restricted command."
-                " You do not have permissions to run this."
+               "𝑻𝒉𝒂𝒕❜𝒔 𝒂 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝑹𝒆𝒔𝒕𝒓𝒊𝒄𝒕𝒆𝒅 𝑪𝒐𝒎𝒎𝒂𝒏𝒅. "
+               "\n𝒀𝒐𝒖 𝒄𝒂𝒏❜𝒕 𝒂𝒄𝒄𝒆𝒔𝒔 𝒊𝒕. 𝑻𝒉𝒂𝒏𝒌𝒔𝒔."
             )
 
     return is_dev_plus_func
@@ -139,7 +139,7 @@ def sudo_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "𝑾𝒉𝒐 𝒅𝒊𝒔 𝑵𝒐𝒏-𝑨𝒅𝒎𝒆𝒎𝒆 𝑲𝒊𝒊𝒅𝒅𝒐, 𝑰𝒏𝒔𝒕𝒓𝒖𝒄𝒕𝒊𝒏𝒈 𝒎𝒆, 𝑾𝒉𝒂𝒕 𝒕𝒐 𝒅𝒐❓\n𝒀𝒐𝒖 𝒘𝒂𝒏𝒕 𝒂 𝑩𝒂𝒏❓"
             )
 
     return is_sudo_plus_func
@@ -176,7 +176,7 @@ def whitelist_plus(func):
             return func(update, context, *args, **kwargs)
         else:
             update.effective_message.reply_text(
-                f"You don't have access to use this.\nVisit @{SUPPORT_CHAT}"
+                f"𝒀𝒐𝒖❜𝒓𝒆 𝒏𝒐𝒕 𝒂𝒍𝒍𝒐𝒘𝒆𝒅 𝒕𝒐 𝒂𝒄𝒄𝒆𝒔𝒔 𝒕𝒉𝒊𝒔 𝒄𝒐𝒎𝒎𝒂𝒏𝒅.\n𝑽𝒊𝒔𝒊𝒕 @{SUPPORT_CHAT}"
             )
 
     return is_whitelist_plus_func
@@ -200,7 +200,7 @@ def user_admin(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "𝑾𝒉𝒐 𝒅𝒊𝒔 𝑵𝒐𝒏-𝑨𝒅𝒎𝒆𝒎𝒆 𝑲𝒊𝒊𝒅𝒅𝒐, 𝑰𝒏𝒔𝒕𝒓𝒖𝒄𝒕𝒊𝒏𝒈 𝒎𝒆, 𝑾𝒉𝒂𝒕 𝒕𝒐 𝒅𝒐❓\n𝒀𝒐𝒖 𝒘𝒂𝒏𝒕 𝒂 𝑩𝒂𝒏❓"
             )
 
     return is_admin
@@ -252,9 +252,9 @@ def bot_admin(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            not_admin = "I'm not admin! - REEEEEE"
+            not_admin = "𝑯𝒆𝒚 𝒀𝒐𝒖!!!! 𝒀𝒂 𝒀𝒐𝒖!!!\n𝑰❜𝒎 𝑵𝒐𝒕 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆!!\n\n𝑭𝑭𝑭𝑭\n𝑴𝒂𝒌𝒆 𝒎𝒆 𝑨𝒅𝒎𝒊𝒏 𝒘𝒊𝒕𝒉 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕𝒔 (𝒆𝒙𝒄𝒆𝒑𝒕 𝑹𝒆𝒎𝒂𝒊𝒏 𝑨𝒏𝒐𝒏𝒚𝒎𝒐𝒖𝒔) 𝑷𝒉𝒂𝒔𝒕."
         else:
-            not_admin = f"I'm not admin in <b>{update_chat_title}</b>! - REEEEEE"
+            not_admin = f"𝑯𝒆𝒚 𝒀𝒐𝒖!!!! 𝒀𝒂 𝒀𝒐𝒖!!!\n𝑰❜𝒎 𝑵𝒐𝒕 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒊𝒏 <b>{update_chat_title}</b>!!\n\n𝑭𝑭𝑭𝑭\n𝑴𝒂𝒌𝒆 𝒎𝒆 𝑨𝒅𝒎𝒊𝒏 𝒘𝒊𝒕𝒉 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕𝒔 (𝒆𝒙𝒄𝒆𝒑𝒕 𝑹𝒆𝒎𝒂𝒊𝒏 𝑨𝒏𝒐𝒏𝒚𝒎𝒐𝒖𝒔) 𝑷𝒉𝒂𝒔𝒕."
 
         if is_bot_admin(chat, bot.id):
             return func(update, context, *args, **kwargs)
@@ -273,9 +273,9 @@ def bot_can_delete(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_delete = "I can't delete messages here!\nMake sure I'm admin and can delete other user's messages."
+            cant_delete = "𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒅𝒆𝒍𝒆𝒕𝒆 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔 𝒉𝒆𝒓𝒆!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒅𝒆𝒍𝒆𝒕𝒆 𝒐𝒕𝒉𝒆𝒓 𝒖𝒔𝒆𝒓𝒔❜ 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔."
         else:
-            cant_delete = f"I can't delete messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can delete other user's messages there."
+            cant_delete = f"𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒅𝒆𝒍𝒆𝒕𝒆 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔 𝒊𝒏 <b>{update_chat_title}</b>!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒅𝒆𝒍𝒆𝒕𝒆 𝒐𝒕𝒉𝒆𝒓 𝒖𝒔𝒆𝒓𝒔❜ 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔."
 
         if can_delete(chat, bot.id):
             return func(update, context, *args, **kwargs)
@@ -295,9 +295,9 @@ def can_pin(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_pin = "I can't pin messages here!\nMake sure I'm admin and can pin messages."
+            cant_pin = "𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒑𝒊𝒏 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔 𝒉𝒆𝒓𝒆!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒑𝒊𝒏 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔."
         else:
-            cant_pin = f"I can't pin messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can pin messages there."
+            cant_pin = f"𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒑𝒊𝒏 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔 𝒊𝒏 <b>{update_chat_title}</b>!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒑𝒊𝒏 𝒎𝒆𝒔𝒔𝒂𝒈𝒆𝒔."
 
         if chat.get_member(bot.id).can_pin_messages:
             return func(update, context, *args, **kwargs)
@@ -316,11 +316,11 @@ def can_promote(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_promote = "I can't promote/demote people here!\nMake sure I'm admin and can appoint new admins."
+            cant_promote = "𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒑𝒓𝒐𝒎𝒐𝒕𝒆/𝒅𝒆𝒎𝒐𝒕𝒆 𝒖𝒔𝒆𝒓𝒔 𝒉𝒆𝒓𝒆!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒂𝒑𝒑𝒐𝒊𝒏𝒕 𝒏𝒆𝒘 𝒂𝒅𝒎𝒊𝒏𝒔 𝒐𝒓 𝒅𝒆𝒎𝒐𝒕𝒆 𝒂𝒅𝒎𝒊𝒏𝒔 𝒂𝒑𝒑𝒐𝒊𝒏𝒕𝒆𝒅 𝒃𝒚 𝒎𝒆."
         else:
             cant_promote = (
-                f"I can't promote/demote people in <b>{update_chat_title}</b>!\n"
-                f"Make sure I'm admin there and can appoint new admins."
+                f"𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒑𝒓𝒐𝒎𝒐𝒕𝒆/𝒅𝒆𝒎𝒐𝒕𝒆 𝒖𝒔𝒆𝒓𝒔 𝒊𝒏 <b>{update_chat_title}</b>!!\n"
+                f"𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒂𝒑𝒑𝒐𝒊𝒏𝒕 𝒏𝒆𝒘 𝒂𝒅𝒎𝒊𝒏𝒔 𝒐𝒓 𝒅𝒆𝒎𝒐𝒕𝒆 𝒂𝒅𝒎𝒊𝒏𝒔 𝒂𝒑𝒑𝒐𝒊𝒏𝒕𝒆𝒅 𝒃𝒚 𝒎𝒆."
             )
 
         if chat.get_member(bot.id).can_promote_members:
@@ -340,9 +340,9 @@ def can_restrict(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_restrict = "I can't restrict people here!\nMake sure I'm admin and can restrict users."
+            cant_restrict = "𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒓𝒆𝒔𝒕𝒓𝒊𝒄𝒕 𝒖𝒔𝒆𝒓𝒔 𝒉𝒆𝒓𝒆!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒓𝒆𝒔𝒕𝒓𝒊𝒄𝒕 𝒖𝒔𝒆𝒓𝒔."
         else:
-            cant_restrict = f"I can't restrict people in <b>{update_chat_title}</b>!\nMake sure I'm admin there and can restrict users."
+            cant_restrict = f"𝑰 𝒇𝒆𝒆𝒍 𝒍𝒊𝒌𝒆 𝑰❜𝒎 𝒖𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒓𝒆𝒔𝒕𝒓𝒊𝒄𝒕 𝒖𝒔𝒆𝒓𝒔 𝒊𝒏 <b>{update_chat_title}</b>!!\n𝑴𝒂𝒌𝒆 𝒔𝒖𝒓𝒆 𝒕𝒉𝒂𝒕 𝑰❜𝒎 𝒂𝒏 𝑨𝒅𝒎𝒆𝒎𝒆 𝒂𝒏𝒅 𝒎𝒖𝒔𝒕 𝒃𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒓𝒆𝒔𝒕𝒓𝒊𝒄𝒕 𝒖𝒔𝒆𝒓𝒔."
 
         if chat.get_member(bot.id).can_restrict_members:
             return func(update, context, *args, **kwargs)
@@ -366,7 +366,7 @@ def user_can_ban(func):
             and user not in [777000, 1837687523]
         ):
             update.effective_message.reply_text(
-                "😹 Sorry You can't do that"
+                "😂 𝑶𝒉 𝑳𝒐𝑳, 𝑺𝒐𝒓𝒓𝒚, 𝒃𝒖𝒕 𝒚𝒐𝒖 𝒄𝒂𝒏❜𝒕 𝒅𝒐 𝒕𝒉𝒂𝒕."
             )
             return ""
         return func(update, context, *args, **kwargs)
@@ -392,7 +392,7 @@ def connection_status(func):
         else:
             if update.effective_message.chat.type == "private":
                 update.effective_message.reply_text(
-                    "Send /connect in a group that you and I have in common first."
+                    "𝑺𝒆𝒏𝒅 `/connect` 𝒊𝒏 𝒂 𝒈𝒓𝒐𝒖𝒑 𝒕𝒉𝒂𝒕 𝒚𝒐𝒖 𝒂𝒏𝒅 𝒎𝒆 𝒉𝒂𝒗𝒆 𝒊𝒏 𝒄𝒐𝒎𝒎𝒐𝒏 𝒇𝒊𝒓𝒔𝒕𝒍𝒚."
                 )
                 return connected_status
 
@@ -402,6 +402,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from ShasaBot.modules import connection
+from TeslaRobot.modules import connection
 
 connected = connection.connected
