@@ -1,7 +1,7 @@
 import threading
 
-from ShasaBot import dispatcher
-from ShasaBot.modules.sql import BASE, SESSION
+from TeslaRobot import dispatcher
+from TeslaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
