@@ -1,9 +1,9 @@
 import html
 import random
-import ShasaBot.modules.truth_and_dare_string as truth_and_dare_string
-from ShasaBot import dispatcher
+import TeslaRobot.modules.truth_and_dare_string as truth_and_dare_string
+from TeslaRobot import dispatcher
 from telegram import ParseMode, Update, Bot
-from ShasaBot.modules.disable import DisableAbleCommandHandler
+from TeslaRobot.modules.disable import DisableAbleCommandHandler
 from telegram.ext import CallbackContext, run_async
 
 @run_async

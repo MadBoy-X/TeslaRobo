@@ -1,5 +1,5 @@
-from ShasaBot.events import register
-from ShasaBot import telethn as tbot
+from TeslaRobot.events import register
+from TeslaRobot import telethn as tbot
 TMP_DOWNLOAD_DIRECTORY = "./"
 from telethon import events
 import os

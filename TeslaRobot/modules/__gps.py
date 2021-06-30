@@ -1,8 +1,8 @@
 import os
-from ShasaBot import telethn as tbot
+from TeslaRobot import telethn as tbot
 from geopy.geocoders import Nominatim
-from ShasaBot.events import register
-from ShasaBot import *
+from TeslaRobot.events import register
+from TeslaRobot import *
 from telethon import *
 from telethon.tl import *
 

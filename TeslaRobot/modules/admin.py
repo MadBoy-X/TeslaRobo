@@ -5,9 +5,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from ShasaBot import DRAGONS, dispatcher
-from ShasaBot.modules.disable import DisableAbleCommandHandler
-from ShasaBot.modules.helper_funcs.chat_status import (
+from TeslaRobot import DRAGONS, dispatcher
+from TeslaRobot.modules.disable import DisableAbleCommandHandler
+from TeslaRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -15,19 +15,19 @@ from ShasaBot.modules.helper_funcs.chat_status import (
     user_admin,
     ADMIN_CACHE,
 )
-from ShasaBot.helper_extra.admin_rights import (
+from TeslaRobot.helper_extra.admin_rights import (
     user_can_pin,
     user_can_promote,
     user_can_changeinfo,
 )
 
-from ShasaBot.modules.helper_funcs.extraction import (
+from TeslaRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from ShasaBot.modules.log_channel import loggable
-from ShasaBot.modules.helper_funcs.alternate import send_message
-from ShasaBot.modules.helper_funcs.alternate import typing_action
+from TeslaRobot.modules.log_channel import loggable
+from TeslaRobot.modules.helper_funcs.alternate import send_message
+from TeslaRobot.modules.helper_funcs.alternate import typing_action
 
 
 @run_async

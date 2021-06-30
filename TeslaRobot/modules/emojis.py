@@ -6,10 +6,10 @@ from typing import List
 from telegram import Bot, Update, ParseMode
 from telegram.ext import run_async
 
-from ShasaBot import dispatcher
-from ShasaBot.modules.disable import DisableAbleCommandHandler
-from ShasaBot.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from ShasaBot.modules.helper_funcs.extraction import extract_user
+from TeslaRobot import dispatcher
+from TeslaRobot.modules.disable import DisableAbleCommandHandler
+from TeslaRobot.modules.helper_funcs.chat_status import is_user_admin, user_admin
+from TeslaRobot.modules.helper_funcs.extraction import extract_user
 
 #sleep how many times after each edit in 'love' 
 EDIT_SLEEP = 1

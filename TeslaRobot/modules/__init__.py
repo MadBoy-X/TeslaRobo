@@ -1,4 +1,4 @@
-from ShasaBot import LOAD, LOGGER, NO_LOAD
+from TeslaRobot import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():

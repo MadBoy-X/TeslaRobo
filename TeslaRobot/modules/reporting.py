@@ -1,9 +1,9 @@
 import html
 
-from ShasaBot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from ShasaBot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from ShasaBot.modules.log_channel import loggable
-from ShasaBot.modules.sql import reporting_sql as sql
+from TeslaRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from TeslaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from TeslaRobot.modules.log_channel import loggable
+from TeslaRobot.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

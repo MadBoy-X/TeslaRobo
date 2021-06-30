@@ -25,9 +25,9 @@ url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
 from google_trans_new import google_translator
 from pyrogram import filters
 
-from ShasaBot.helper_extra.aichat import add_chat, get_session, remove_chat
-from ShasaBot.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from ShasaBot import pbot as shasa
+from TeslaRobot.helper_extra.aichat import add_chat, get_session, remove_chat
+from TeslaRobot.pyrogramee.pluginshelper import admins_only, edit_or_reply
+from TeslaRobot import pbot as shasa
 
 translator = google_translator()
 

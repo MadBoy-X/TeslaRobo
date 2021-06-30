@@ -6,8 +6,8 @@ import time
 import uuid
 from io import BytesIO
 
-import ShasaBot.modules.sql.feds_sql as sql
-from ShasaBot import (
+import TeslaRobot.modules.sql.feds_sql as sql
+from TeslaRobot import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
@@ -17,15 +17,15 @@ from ShasaBot import (
     WOLVES,
     dispatcher,
 )
-from ShasaBot.modules.disable import DisableAbleCommandHandler
-from ShasaBot.modules.helper_funcs.alternate import send_message
-from ShasaBot.modules.helper_funcs.chat_status import is_user_admin
-from ShasaBot.modules.helper_funcs.extraction import (
+from TeslaRobot.modules.disable import DisableAbleCommandHandler
+from TeslaRobot.modules.helper_funcs.alternate import send_message
+from TeslaRobot.modules.helper_funcs.chat_status import is_user_admin
+from TeslaRobot.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from ShasaBot.modules.helper_funcs.string_handling import markdown_parser
+from TeslaRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

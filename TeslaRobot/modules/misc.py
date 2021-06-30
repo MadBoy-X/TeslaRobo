@@ -1,6 +1,6 @@
-from ShasaBot.modules.helper_funcs.chat_status import user_admin
-from ShasaBot.modules.disable import DisableAbleCommandHandler
-from ShasaBot import dispatcher
+from TeslaRobot.modules.helper_funcs.chat_status import user_admin
+from TeslaRobot.modules.disable import DisableAbleCommandHandler
+from TeslaRobot import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update

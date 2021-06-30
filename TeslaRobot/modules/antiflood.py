@@ -4,15 +4,15 @@ import re
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from ShasaBot import TIGERS, WOLVES, dispatcher
-from ShasaBot.modules.helper_funcs.chat_status import (
+from TeslaRobot import TIGERS, WOLVES, dispatcher
+from TeslaRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from ShasaBot.modules.log_channel import loggable
-from ShasaBot.modules.sql import antiflood_sql as sql
+from TeslaRobot.modules.log_channel import loggable
+from TeslaRobot.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
@@ -23,10 +23,10 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from ShasaBot.modules.helper_funcs.string_handling import extract_time
-from ShasaBot.modules.connection import connected
-from ShasaBot.modules.helper_funcs.alternate import send_message
-from ShasaBot.modules.sql.approve_sql import is_approved
+from TeslaRobot.modules.helper_funcs.string_handling import extract_time
+from TeslaRobot.modules.connection import connected
+from TeslaRobot.modules.helper_funcs.alternate import send_message
+from TeslaRobot.modules.sql.approve_sql import is_approved
 
 FLOOD_GROUP = 3
 

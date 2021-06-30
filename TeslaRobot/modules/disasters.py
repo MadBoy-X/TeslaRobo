@@ -3,7 +3,7 @@ import json
 import os
 from typing import Optional
 
-from ShasaBot import (
+from TeslaRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -13,18 +13,18 @@ from ShasaBot import (
     WOLVES,
     dispatcher,
 )
-from ShasaBot.modules.helper_funcs.chat_status import (
+from TeslaRobot.modules.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from ShasaBot.modules.helper_funcs.extraction import extract_user
-from ShasaBot.modules.log_channel import gloggable
+from TeslaRobot.modules.helper_funcs.extraction import extract_user
+from TeslaRobot.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "ShasaBot/elevated_users.json")
+ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "TeslaRobot/elevated_users.json")
 
 
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
@@ -628,7 +628,7 @@ def devlist(update: Update, context: CallbackContext):
 #  ❍ /gbanlist*:* Outputs a list of gbanned users
 
 # *Global Blue Text*
-#  ❍ /gignoreblue*:* <word>*:* Globally ignorea bluetext cleaning of saved word across ShasaBot.
+#  ❍ /gignoreblue*:* <word>*:* Globally ignorea bluetext cleaning of saved word across TeslaRobot.
 #  ❍ /ungignoreblue*:* <word>*:* Remove said command from global cleaning list
 
 # *shasa Core*

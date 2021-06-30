@@ -1,8 +1,8 @@
-from ShasaBot.events import register
+from TeslaRobot.events import register
 
-from ShasaBot import OWNER_ID
+from TeslaRobot import OWNER_ID
 
-from ShasaBot import telethn as tbot
+from TeslaRobot import telethn as tbot
 
 import os 
 
@@ -40,7 +40,7 @@ async def lego(event):
 
     text = event.pattern_match.group(1)
 
-    img = Image.open('./ShasaBot/resources/blackbg.jpg')
+    img = Image.open('./TeslaRobot/resources/blackbg.jpg')
 
     draw = ImageDraw.Draw(img)
 
@@ -52,7 +52,7 @@ async def lego(event):
 
     shadowcolor = "blue"
 
-    font = ImageFont.truetype("./ShasaBot/resources/Chopsic.otf", 330)
+    font = ImageFont.truetype("./TeslaRobot/resources/Chopsic.otf", 330)
 
     w, h = draw.textsize(text, font=font)
 
@@ -72,7 +72,7 @@ async def lego(event):
 
     img.save(fname2, "png")
 
-    await tbot.send_file(event.chat_id, fname2, caption="Made By ShasaBot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By TeslaRobot")
 
     if os.path.exists(fname2):
 
@@ -114,7 +114,7 @@ async def lego(event):
 
     text = event.pattern_match.group(1)
 
-    img = Image.open('./ShasaBot/resources/blackbg.jpg')
+    img = Image.open('./TeslaRobot/resources/blackbg.jpg')
 
     draw = ImageDraw.Draw(img)
 
@@ -126,7 +126,7 @@ async def lego(event):
 
     shadowcolor = "blue"
 
-    font = ImageFont.truetype("./ShasaBot/resources/Maghrib.ttf", 1000)
+    font = ImageFont.truetype("./TeslaRobot/resources/Maghrib.ttf", 1000)
 
     w, h = draw.textsize(text, font=font)
 
@@ -146,7 +146,7 @@ async def lego(event):
 
     img.save(fname2, "png")
 
-    await tbot.send_file(event.chat_id, fname2, caption="Made By ShasaBot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By TeslaRobot")
 
     if os.path.exists(fname2):
 

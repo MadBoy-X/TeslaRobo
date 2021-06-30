@@ -5,7 +5,7 @@ import aiofiles
 import aiohttp
 from random import randint
 from pyrogram import filters
-from ShasaBot import pbot as LYCIA
+from TeslaRobot import pbot as LYCIA
 
 async def fetch(url):
     async with aiohttp.ClientSession() as session:

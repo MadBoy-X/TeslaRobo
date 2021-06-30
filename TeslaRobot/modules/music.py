@@ -12,9 +12,9 @@ from tswift import Song
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
 
-from ShasaBot.conf import get_str_key
-from ShasaBot.pyrogramee.pluginshelper import get_text, progress
-from ShasaBot import pbot
+from TeslaRobot.conf import get_str_key
+from TeslaRobot.pyrogramee.pluginshelper import get_text, progress
+from TeslaRobot import pbot
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 

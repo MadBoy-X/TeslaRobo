@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import ShasaBot.modules.sql.notes_sql as sql
-from ShasaBot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from ShasaBot.__main__ import DATA_IMPORT
-from ShasaBot.modules.helper_funcs.chat_status import user_admin
-from ShasaBot.modules.helper_funcs.alternate import typing_action
+import TeslaRobot.modules.sql.notes_sql as sql
+from TeslaRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from TeslaRobot.__main__ import DATA_IMPORT
+from TeslaRobot.modules.helper_funcs.chat_status import user_admin
+from TeslaRobot.modules.helper_funcs.alternate import typing_action
 
-# from ShasaBot.modules.rules import get_rules
-import ShasaBot.modules.sql.rules_sql as rulessql
+# from TeslaRobot.modules.rules import get_rules
+import TeslaRobot.modules.sql.rules_sql as rulessql
 
-# from ShasaBot.modules.sql import warns_sql as warnssql
-import ShasaBot.modules.sql.blacklist_sql as blacklistsql
-from ShasaBot.modules.sql import disable_sql as disabledsql
+# from TeslaRobot.modules.sql import warns_sql as warnssql
+import TeslaRobot.modules.sql.blacklist_sql as blacklistsql
+from TeslaRobot.modules.sql import disable_sql as disabledsql
 
-# from ShasaBot.modules.sql import cust_filters_sql as filtersql
-# import ShasaBot.modules.sql.welcome_sql as welcsql
-import ShasaBot.modules.sql.locks_sql as locksql
-from ShasaBot.modules.connection import connected
+# from TeslaRobot.modules.sql import cust_filters_sql as filtersql
+# import TeslaRobot.modules.sql.welcome_sql as welcsql
+import TeslaRobot.modules.sql.locks_sql as locksql
+from TeslaRobot.modules.connection import connected
 
 
 @run_async
@@ -325,7 +325,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("ShasaBot{}.backup".format(chat_id), "w") as f:
+    with open("TeslaRobot{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -341,15 +341,15 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("ShasaBot{}.backup".format(chat_id), "rb"),
-        caption="💾*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `ShasaBot-Backup` was specially made for notes 📚.".format(
+        document=open("TeslaRobot{}.backup".format(chat_id), "rb"),
+        caption="💾*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `TeslaRobot-Backup` was specially made for notes 📚.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("ShasaBot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("TeslaRobot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

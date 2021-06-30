@@ -3,14 +3,14 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import ShasaBot.modules.sql.notes_sql as sql
-from ShasaBot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from ShasaBot.modules.disable import DisableAbleCommandHandler
-from ShasaBot.modules.helper_funcs.handlers import MessageHandlerChecker
-from ShasaBot.modules.helper_funcs.chat_status import user_admin, connection_status
-from ShasaBot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from ShasaBot.modules.helper_funcs.msg_types import get_note_type
-from ShasaBot.modules.helper_funcs.string_handling import (
+import TeslaRobot.modules.sql.notes_sql as sql
+from TeslaRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from TeslaRobot.modules.disable import DisableAbleCommandHandler
+from TeslaRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from TeslaRobot.modules.helper_funcs.chat_status import user_admin, connection_status
+from TeslaRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from TeslaRobot.modules.helper_funcs.msg_types import get_note_type
+from TeslaRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (

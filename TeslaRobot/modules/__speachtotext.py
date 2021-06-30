@@ -1,4 +1,4 @@
-from ShasaBot import telethn as tbot
+from TeslaRobot import telethn as tbot
 import os
 import urllib.request
 from datetime import datetime
@@ -11,8 +11,8 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from ShasaBot import *
-from ShasaBot.events import register
+from TeslaRobot import *
+from TeslaRobot.events import register
 
 
 async def is_register_admin(chat, user):
