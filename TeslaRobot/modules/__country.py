@@ -87,7 +87,7 @@ async def msg(event):
 ➥ Borders :- {borders}
 ➥ Calling Codes :- {call}
 ➥ Country's Capital :- {capital}
-➥ Country's currency :- {currencies}
+➥ Country's Currency :- {currencies}
 ➥ Country's Flag :- {okie}
 ➥ Demonym :- {HmM}
 ➥ Country Type :- {EsCoBaR}
