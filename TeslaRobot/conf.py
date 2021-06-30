@@ -1,6 +1,6 @@
 import sys
 from envparse import env
-from ShasaBot import LOGGER
+from TeslaRobot import LOGGER
 
 DEFAULTS = {
     "LOAD_MODULES": True,
