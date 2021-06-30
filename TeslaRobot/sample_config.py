@@ -47,7 +47,6 @@ class Config(object):
     # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     TIGERS = get_user_list("elevated_users.json", "tigers")
     WOLVES = get_user_list("elevated_users.json", "whitelists")
-    DONATION_LINK = None  # EG, paypal
     CERT_PATH = None
     PORT = 5000
     DEL_CMDS = True  # Delete commands that users dont have access to, like delete /ban if a non admin uses it.
@@ -55,7 +54,7 @@ class Config(object):
     WORKERS = (
         8  # Number of subthreads to use. Set as number of threads your processor uses
     )
-    BAN_STICKER = ""  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
+    BAN_STICKER = "CAADBQADNwUAArR1kFY-CJ2yw8eczQI"  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
     ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
     CASH_API_KEY = (
         "awoo"  # Get your API key from https://www.alphavantage.co/support/#api-key
