@@ -81,27 +81,27 @@ async def msg(event):
 
     caption = f"""<b><u>Information Gathered Successfully</b></u>
 <b>
-Country Name:- {name}
-Alternative Spellings:- {hu}
-Country Area:- {area} square kilometers
-Borders:- {borders}
-Calling Codes:- {call}
-Country's Capital:- {capital}
-Country's currency:- {currencies}
-Country's Flag:- {okie}
-Demonym:- {HmM}
-Country Type:- {EsCoBaR}
-ISO Names:- {iso}
-Languages:- {lMAO}
-Native Name:- {nonive}
-population:- {waste}
-Region:- {reg}
-Sub Region:- {sub}
-Time Zones:- {tom}
-Top Level Domain:- {lanester}
-wikipedia:- {wiki}</b>
+➥ Country Name :- {name}
+➥ Alternative Spellings :- {hu}
+➥ Country Area :- {area} square kilometers
+➥ Borders :- {borders}
+➥ Calling Codes :- {call}
+➥ Country's Capital :- {capital}
+➥ Country's currency :- {currencies}
+➥ Country's Flag :- {okie}
+➥ Demonym :- {HmM}
+➥ Country Type :- {EsCoBaR}
+➥ ISO Names :- {iso}
+➥ Languages :- {lMAO}
+➥ Native Name :- {nonive}
+➥ Population :- {waste}
+➥ Region :- {reg}
+➥ Sub Region :- {sub}
+➥ Time Zones :- {tom}
+➥ Top Level Domain :- {lanester}
+➥ Wikipedia :- {wiki}</b>
 
-Gathered By Shasa.</b>
+Gathered By TeslaRobo.</b>
 """
     
     
