@@ -1,6 +1,6 @@
-import ShasaBot.modules.sql.blacklistusers_sql as sql
-from ShasaBot import ALLOW_EXCL
-from ShasaBot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
+import TeslaRobot.modules.sql.blacklistusers_sql as sql
+from TeslaRobot import ALLOW_EXCL
+from TeslaRobot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 
 from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, RegexHandler, Filters
