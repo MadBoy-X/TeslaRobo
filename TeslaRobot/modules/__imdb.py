@@ -86,24 +86,24 @@ async def imdb(e):
             + mov_title
             + "</code>\n<code>"
             + mov_details
-            + "</code>\n<b>Rating : </b><code>"
+            + "</code>\n<b>➥ Rating : </b><code>"
             + mov_rating
-            + "</code>\n<b>Country : </b><code>"
+            + "</code>\n<b>➥ Country : </b><code>"
             + mov_country[0]
-            + "</code>\n<b>Language : </b><code>"
+            + "</code>\n<b>➥Language : </b><code>"
             + mov_language[0]
-            + "</code>\n<b>Director : </b><code>"
+            + "</code>\n<b>➥ Director : </b><code>"
             + director
-            + "</code>\n<b>Writer : </b><code>"
+            + "</code>\n<b>➥ Writer : </b><code>"
             + writer
-            + "</code>\n<b>Stars : </b><code>"
+            + "</code>\n<b>➥ Stars : </b><code>"
             + stars
-            + "</code>\n<b>IMDB Url : </b>"
+            + "</code>\n<b>➥ IMDB Url : </b>"
             + mov_link
-            + "\n<b>Story Line : </b>"
+            + "\n<b>➥ Story Line : </b>"
             + story_line,
             link_preview=True,
             parse_mode="HTML",
         )
     except IndexError:
-        await e.reply("Plox enter **Valid movie name** kthx")
+        await e.reply("Plox enter **Valid movie name** k thx byee")
