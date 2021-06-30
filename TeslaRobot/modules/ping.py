@@ -74,17 +74,35 @@ def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
 
     start_time = time.time()
-    message = msg.reply_text("𝕻𝖎𝖓𝖌𝖎𝖓𝖌...")
+    message = msg.reply_text("☞ Pong!!")
     end_time = time.time()
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
-        "𝕻𝖔𝖓𝖌!!\n"
-        "<b>𝕿𝖎𝖒𝖊 𝖙𝖆𝖐𝖊𝖓:</b> <code>{}</code>\n"
-        "<b>𝕾𝖊𝖗𝖛𝖎𝖈𝖊 𝖚𝖕𝖙𝖎𝖒𝖊:</b> <code>{}</code>".format(telegram_ping, uptime),
-        parse_mode=ParseMode.HTML,
-    )
+        "<b><i>☞ Pong!!</i></b>\n"
+        "<b>➥ Time Taken:</b> <code>{}</code>\n"
+        "<b>➥ Service uptime:</b> <code>{}</code>\n\n"
+        "<b><i>Pingged from TeslaRobo DataBase and Telegram Server✅...</i></b>".format(telegram_ping, uptime),
+        parse_mode=ParseMode.HTML)
+    
+
+@run_async
+@sudo_plus
+def ting(update: Update, context: CallbackContext):
+    msg = update.effective_message
+
+    start_time = time.time()
+    message = msg.reply_text("☞ Tong!!")
+    end_time = time.time()
+    telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
+    uptime = get_readable_time((time.time() - StartTime))
+
+    message.edit_text(
+        "<b><i>☞ Tong!!</i></b>\n"
+        "<b>➥ Time Taken:</b> <code>{}</code>\n"
+        "<b>➥ Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
+        parse_mode=ParseMode.HTML)
 
 
 @run_async
@@ -97,7 +115,7 @@ def pingall(update: Update, context: CallbackContext):
 
     reply_msg = "⏱Ping results are:\n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "\n<b>𝕾𝖊𝖗𝖛𝖎𝖈𝖊 𝖚𝖕𝖙𝖎𝖒𝖊:</b> <code>{}</code>".format(uptime)
+    reply_msg += "\n<b>Service uptime:</b> <code>{}</code>".format(uptime)
 
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True
@@ -105,10 +123,12 @@ def pingall(update: Update, context: CallbackContext):
 
 
 PING_HANDLER = DisableAbleCommandHandler("ping", ping)
+TING_HANDLER = DisableAbleCommandHandler("ting", ting)
 PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall)
 
 dispatcher.add_handler(PING_HANDLER)
+dispatcher.add_handler(TING_HANDLER)
 dispatcher.add_handler(PINGALL_HANDLER)
 
-__command_list__ = ["ping", "pingall"]
-__handlers__ = [PING_HANDLER, PINGALL_HANDLER]
+__command_list__ = ["ping", "ting", "pingall"]
+__handlers__ = [PING_HANDLER, TING_HANDLER, PINGALL_HANDLER]
