@@ -1,0 +1,40 @@
+
+name: madboy482
+
+on: push
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Find and Replace
+
+        uses: jacobtomlinson/gha-find-replace@master
+
+        with:
+
+          find: "ShasaBot"
+
+          replace: "TeslaRobot"
+
+      - name: Create Pull Request
+
+        uses: stefanzweifel/git-auto-commit-action@v4
+
+        with:
+
+          commit_message: 'Initial Commit'
+
+          commit_options: '--no-verify'
+
+          repository: .
+
+          commit_user_name: madboy482
+
+          commit_user_email: nalinvijay2005@gmail.com
