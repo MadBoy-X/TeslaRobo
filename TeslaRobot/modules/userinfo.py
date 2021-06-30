@@ -32,7 +32,7 @@ from TeslaRobot.modules.sql.afk_sql import is_afk, check_afk_status
 from TeslaRobot.modules.sql.users_sql import get_user_num_chats
 from TeslaRobot.modules.helper_funcs.chat_status import sudo_plus
 from TeslaRobot.modules.helper_funcs.extraction import extract_user
-from TeslaRobot import telethn as ShasaTelethonClient, TIGERS, DRAGONS, DEMONS
+from TeslaRobot import telethn as TeslaTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):
@@ -160,7 +160,7 @@ def get_id(update: Update, context: CallbackContext):
             )
 
 
-@ShasaTelethonClient.on(
+@TeslaTelethonClient.on(
     events.NewMessage(
         pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )
