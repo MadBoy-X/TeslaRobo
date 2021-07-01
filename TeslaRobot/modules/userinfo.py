@@ -178,23 +178,24 @@ async def group_info(event) -> None:
             "Can't for some reason, maybe it is a private one or that I am banned there."
         )
         return
-    msg = f"**ID**: `{entity.id}`"
-    msg += f"\n**Title**: `{entity.title}`"
-    msg += f"\n**Datacenter**: `{entity.photo.dc_id}`"
-    msg += f"\n**Video PFP**: `{entity.photo.has_video}`"
-    msg += f"\n**Supergroup**: `{entity.megagroup}`"
-    msg += f"\n**Restricted**: `{entity.restricted}`"
-    msg += f"\n**Scam**: `{entity.scam}`"
-    msg += f"\n**Slowmode**: `{entity.slowmode_enabled}`"
+    msg = f"**➥ ID** : `{entity.id}`"
+    msg += f"\n**➥ Title** : `{entity.title}`"
+    msg += f"\n**➥ Datacenter** : `{entity.photo.dc_id}`"
+    msg += f"\n**➥ Video PFP** : `{entity.photo.has_video}`"
+    msg += f"\n**➥ Supergroup** : `{entity.megagroup}`"
+    msg += f"\n**➥ Restricted** : `{entity.restricted}`"
+    msg += f"\n**➥ Scam** : `{entity.scam}`"
+    msg += f"\n**➥ Slowmode** : `{entity.slowmode_enabled}`"
     if entity.username:
-        msg += f"\n**Username**: {entity.username}"
-    msg += "\n\n**Member Stats:**"
-    msg += f"\n`Admins:` `{len(totallist)}`"
-    msg += f"\n`Users`: `{totallist.total}`"
-    msg += "\n\n**Admins List:**"
+        msg += f"\n**➥ Username** : {entity.username}"
+    msg += "\n\n**➥ Member Stats :**"
+    msg += f"\n`➥ Admins` : `{len(totallist)}`"
+    msg += f"\n`➥ Users` : `{totallist.total}`"
+    msg += "\n\n**➥ Admins List :**"
     for x in totallist:
         msg += f"\n• [{x.id}](tg://user?id={x.id})"
-    msg += f"\n\n**Description**:\n`{ch_full.full_chat.about}`"
+    msg += f"\n\n**➥ Description** :\n`{ch_full.full_chat.about}`"
+    msg += f"\n\n**Information Gathered by TeslaRobo, Just for You. 💞**"
     await event.reply(msg)
 
 
@@ -242,20 +243,20 @@ def info(update: Update, context: CallbackContext):
 
     text = (
         f"╒═══「<b> Appraisal results:</b> 」\n"
-        f"ID: <code>{user.id}</code>\n"
-        f"First Name: {html.escape(user.first_name)}"
+        f"<b>➥ ID :</b> <code>{user.id}</code>\n"
+        f"<b>➥ First Name :</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\nLast Name: {html.escape(user.last_name)}"
+        text += f"\n<b>➥ Last Name :</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\nUsername: @{html.escape(user.username)}"
+        text += f"\n<b>➥ Username :</b> @{html.escape(user.username)}"
 
-    text += f"\nPermalink: {mention_html(user.id, 'link')}"
+    text += f"\n<b>➥ PermaLink :</b> {mention_html(user.id, 'Here')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\nPresence: <code>{}</code>"
+        _stext = "\n<b>➥ Presence :</b> <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -271,13 +272,13 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>➥ Health :</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
         if spamwtc:
             text += "\n\n<b>This person is Spamwatched!</b>"
-            text += f"\nReason: <pre>{spamwtc.reason}</pre>"
+            text += f"\nReason : <pre>{spamwtc.reason}</pre>"
             text += "\nAppeal at @SpamWatchSupport"
         else:
             pass
@@ -319,7 +320,7 @@ def info(update: Update, context: CallbackContext):
             result = result.json()["result"]
             if "custom_title" in result.keys():
                 custom_title = result["custom_title"]
-                text += f"\n\nTitle:\n<b>{custom_title}</b>"
+                text += f"\n\nTitle :\n<b>{custom_title}</b>"
     except BadRequest:
         pass
 
@@ -330,6 +331,7 @@ def info(update: Update, context: CallbackContext):
             mod_info = mod.__user_info__(user.id, chat.id).strip()
         if mod_info:
             text += "\n\n" + mod_info
+            text += f"\n\n<b>Information Gathered by TeslaRobo, Just for You. 💞</b>"
 
     if INFOPIC:
         try:
@@ -422,7 +424,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def users(update: Update, context: CallbackContext):
-    stats = "<b><i>📊 Current stats:</i></b>\n<b><i>Loaded from Romeo Database...✅</i></b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b><i>📊 Current stats:</i></b>\n<b><i>Loaded from TeslaRobo Database...✅</i></b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
