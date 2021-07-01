@@ -14,29 +14,26 @@ An Advanced and Modified Group Manager, made using Latest Python &amp; other Lat
 -------------------------------------------------
 
 <p align="center">
-<a href="https://app.codacy.com/gh/MadBoy-X/TeslaRobo?utm_source=github.com&utm_medium=referral&utm_content=MadBoy-X/TeslaRobo&utm_campaign=Badge_Grade_Settings" alt="Codacy Badge">
-<img src="https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo" alt="Libraries.io dependency status for GitHub repo"> <img src="https://img.shields.io/librariesio/github/MadBoy-X/TeslaRobo" /> </a>
-<a href="http://hits.dwyl.com/MadBoy-X/TeslaRobo" alt="HitCount"> <img src="http://hits.dwyl.com/MadBoy-X/TeslaRobo.svg" /> </a>
+    <a href="https://github.com/MadBoy-X/TeslaRobo/network"><img src="https://img.shields.io/github/forks/MadBoy-X/TeslaRobo?style=for-the-badge" alt="GitHub forks" /></a>
+    <a href="https://github.com/MadBoy-X/TeslaRobo/stargazers"><img src="https://img.shields.io/github/stars/MadBoy-X/TeslaRobo?style=for-the-badge" alt="GitHub stars" /></a>
 </p>
 <p align="center">
-<a href="https://github.com/MadBoy-X/TeslaRobo" alt="GitHub closed issues"> <img src="https://img.shields.io/github/issues-closed-raw/MadBoy-X/TeslaRobo?style=flat&logo=github&color=success" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo" alt="GitHub commit activity"> <img src="https://img.shields.io/github/commit-activity/m/MadBoy-X/TeslaRobo" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo/graphs/contributors" alt="GitHub contributors"> <img src="https://img.shields.io/github/contributors/MadBoy-X/TeslaRobo?style=flat&logo=github" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo/network/members" alt="GitHub forks"> <img src="https://img.shields.io/github/forks/MadBoy-X/TeslaRobo?label=Forks&logo=github" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo" alt="GitHub closed pull requests"> <img src="https://img.shields.io/github/issues-pr-closed-raw/MadBoy-X/TeslaRobo?color=success" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo" alt="GitHub issues"> <img src="https://img.shields.io/github/issues-raw/MadBoy-X/TeslaRobo?style=flat&logo=github&color=yellow" /> </a>
+    <a href="https://app.codacy.com/manual/MadBoy-X/TeslaRobo/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
+    <a href="https://github.com/MadBoy-X/TeslaRobo"> <img src="https://img.shields.io/github/repo-size/MadBoy-X/TeslaRobo?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/MadBoy-X/TeslaRobo/commits/Tesla"> <img src="https://img.shields.io/github/last-commit/MadBoy-X/TeslaRobo?color=brown&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/MadBoy-X/TeslaRobo/issues"> <img src="https://img.shields.io/github/issues/MadBoy-X/TeslaRobo?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/MadBoy-X/TeslaRobo/network/members"> <img src="https://img.shields.io/github/forks/MadBoy-X/TeslaRobo?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
+    <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 <p align="center">
 <a href="https://github.com/MadBoy-X/TeslaRobo" alt="GitHub release (latest by date including pre-releases)"> <img src="https://img.shields.io/github/v/release/MadBoy-X/TeslaRobo?include_prereleases?style=flat&logo=github" /> </a>
-<a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=flat&logo=python&color=blue" /> </a>
-<a href="https://github.com/MadBoy-X/TeslaRobo" alt="Docker!"> <img src="https://aleen42.github.io/badges/src/docker.svg" /> </a>
 <a href="https://github.com/MadBoy-X/TeslaRobo" alt="GitHub repo size"> <img src="https://img.shields.io/github/repo-size/MadBoy-X/TeslaRobo" /> </a>
 <a href="https://github.com/MadBoy-X/TeslaRobo/blob/master/LICENSE" alt="GPLv3 license"> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" /> </a>
 </p>
 <p align="center">
 <a href="https://telegram.me/TeslaRobo_Chat" alt="Telegram!"> <img src="https://aleen42.github.io/badges/src/telegram.svg" /> </a>
 <a href="https://github.com/MadBoy-X/TeslaRobo/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /> </a>
+</p>
 
 * Bot Link:  <a href="https://telegram.me/TeslaRobo_Bot" alt="TeslaRobo"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-TeslaRobo-blue" /> </a>
 * Support Group: <a  href="https://telegram.me/TeslaRobo_Chat" alt="TeslaRobo Chat"> <img  src="https://img.shields.io/badge/%F0%9F%92%A1-Tesla%20Robo%20Chat-9cf" /> </a>
