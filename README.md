@@ -58,7 +58,7 @@ Should you be forking this repo then do not forget to star it - <img alt="GitHub
 # Special Thanks to 📝
 
 ▪️ [PaulSonOfLars](https://github.com/PaulSonOfLars)
-▪️ [Saitama](https://github.com/AnimeKaizoku/SaitamRobot)
+▪️ [Saitama](https://github.com/AnimeKaizoku/SaitamaRobot)
 ▪️ [Thehamkercat](https://github.com/thehamkercat)
 ▪️ [DragSama](https://github.com/DragSama)
 ▪️ [Shrimadhav](https://github.com/SpEcHiDe)
