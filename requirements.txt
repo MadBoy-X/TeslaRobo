@@ -29,7 +29,7 @@ regex
 bleach
 git+https://github.com/starry69/python-markdown2.git
 wikipedia
-telethon==1.22.0
+telethon==1.23.0
 telegraph
 heroku3
 spamwatch
