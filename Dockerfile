@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/TeslaRobot
-RUN git clone -b shiken https://github.com/MadBoy-X/TeslaRobo /root/TeslaRobot
+RUN git clone -b Tesla https://github.com/MadBoy-X/TeslaRobo /root/TeslaRobot
 WORKDIR /root/TeslaRobot
 
 # Copy config file to /root/TeslaRobot/TeslaRobot
