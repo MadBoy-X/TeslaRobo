@@ -111,7 +111,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from TeslaRobot.config import Development as Config
+    from TeslaRobot.sample_config import Development as Config
 
     TOKEN = Config.TOKEN
 
